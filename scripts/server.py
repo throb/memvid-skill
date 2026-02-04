@@ -9,6 +9,10 @@ import os
 import memvid_sdk
 from pathlib import Path
 from mcp.server.fastmcp import FastMCP
+from dotenv import load_dotenv
+
+# Load env vars from .env file
+load_dotenv(Path(__file__).parent.parent / ".env")
 
 # Define paths
 WORKSPACE = Path.home() / "clawd"
@@ -86,7 +90,7 @@ def read_memory_file(filename: str) -> str:
 if __name__ == "__main__":
     # Ensure OPENAI_API_KEY is present
     if not os.getenv("OPENAI_API_KEY"):
-        print("Error: OPENAI_API_KEY environment variable is required.", file=sys.stderr)
+        print("Error: OPENAI_API_KEY environment variable is required (check .env file)", file=sys.stderr)
         sys.exit(1)
         
     mcp.run()
