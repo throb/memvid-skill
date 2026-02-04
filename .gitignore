@@ -1,0 +1,5 @@
+venv/
+bob.mv2
+__pycache__/
+*.pyc
+.env
