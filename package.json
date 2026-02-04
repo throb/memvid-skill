@@ -1,0 +1,12 @@
+{
+  "name": "memvid-memory",
+  "version": "1.0.0",
+  "description": "Index and search local workspace memory (markdown files) using MemVid.",
+  "scripts": {
+    "install": "./install.sh",
+    "rebuild": "source venv/bin/activate && python3 scripts/rebuild.py",
+    "search": "source venv/bin/activate && python3 scripts/search.py"
+  },
+  "author": "Rob Nederhorst",
+  "license": "MIT"
+}
